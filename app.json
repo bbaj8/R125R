@@ -1,0 +1,100 @@
+{
+    "name": "freedom",
+    "description": "السورس مجاني مقدم من مطور سورس فريدوم ، انتبة لاتنخدع السورس مجاني تماماً.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/freedomSource/XL444",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "اكتب هنا كود ترمكس",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "اكتب ايدي المالك او اتركها كما هي",
+            "required": true,
+            "value": "1854384004 908312747"
+        },
+        "ASS_ID": {
+            "description": "اكتب ايدي حساب المساعد الخاص ",
+            "required": true,
+            "value": ""
+        },
+        "LOG_GROUP_ID": {
+            "description": "انشئ قناة وارفع البوت والمساعد مع كامل صلاحيات واكتب هنا ايدي القناة ، يجب ان يبدء ب -",
+            "required": true,
+            "value": ""
+        },
+        "API_ID": {
+            "description": "انسخ هذه وضعة في الاسفل :14298184",
+            "required": true,
+            "value": "14298184"
+        },
+        "API_HASH": {
+            "description": "انسخ هذه وضعة في الاسفل : c531d0727df89656a374d7ef2485a779",
+            "required": true,
+            "value": "c531d0727df89656a374d7ef2485a779"
+        },
+        "HEROKU_API_KEY": {
+            "description": "تابع الشرح لمعرفة هذه ",
+            "value": "",
+            "required": false
+        },
+        "HEROKU_APP_NAME": {
+           "description": "اسم اول تطبيق خليتة فوك",
+           "value": "",
+           "required": false
+        },
+        "GROUP": {
+            "description": "اكتب معرف المطور بدون @",
+            "required": true,
+            "value": "rr8r9"
+        },
+         "CHANNEL": {
+            "description": "اكتب معرف قناة المطور بدون @",
+            "required": true,
+            "value": "xl444"
+        },
+        "SUDO_USERS": {
+            "description": "اكتب ايديات المطورين او اتركها كما هي.",
+            "required": true,
+            "value": "1854384004"
+        },
+        "DURATION_LIMIT": {
+            "description": "اتركها كما هي!",
+            "required": true,
+            "value": "5000"
+        },
+        "BOT_TOKEN": {
+            "description": "اكتب هنا توكن البوت",
+            "required": true,
+            "value": ""
+        },
+        "UPSTREAM_REPO": {
+            "description": "لاتغيرها أبدا أبدا أبدا",
+            "value": "https://github.com/freedomSource/XL444",
+            "required": true
+        },
+        "UPSTREAM_BRANCH": {
+            "description": "لاتغيرها ابدا ابدا",
+            "value": "master",
+            "required": true
+        },
+        "MONGO_DB_URI": {
+            "description": "اتركها كما هي لاتغيرها ابدا",
+            "required": true,
+            "value": "mongodb+srv://giveaway:giveaway@giveaway.n121o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+        }
+    },
+    "buildpacks": [{
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    }, {
+      "url": "heroku/python"
+    }],
+    "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
